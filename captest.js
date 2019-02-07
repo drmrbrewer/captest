@@ -3,7 +3,6 @@
 const express = require('express');
 const app = express();
 
-// https://dev.cloud3squared.com/test
 app.get('/test', function(req, res, next) {
     res.status(200).send('well this really does not do much does it?');
 });
