@@ -1,0 +1,18 @@
+{
+  "name": "captest",
+  "version": "1.0.0",
+  "description": "captest",
+  "main": "captest.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "scripts": {
+    "start": "node captest.js",
+    "captest": "node captest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:drmrbrewer/captest.git"
+  },
+  "license": "0BSD"
+}

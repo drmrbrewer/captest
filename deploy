@@ -1,0 +1,7 @@
+#!/bin/bash
+set -x
+
+git add -A .
+git commit -m 'captest container changes'
+git push origin master
+caprover deploy -d
