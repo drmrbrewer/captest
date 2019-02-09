@@ -1,7 +1,17 @@
 #!/bin/bash
+
+COMMIT_MESSAGE="miscellaneous changes"
+
+if [[ $# -eq 1 ]] ; then
+    COMMIT_MESSAGE="${1}"
+fi
+
 set -x
 
+# commit and push
 git add -A .
-git commit -m 'captest container changes'
+git commit -m "${COMMIT_MESSAGE}"
 git push origin master
+
+# deploy to CapRover
 caprover deploy -d

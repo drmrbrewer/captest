@@ -1,7 +1,5 @@
 #!/bin/env node
 
-// fixed?
-
 const express = require('express');
 const app = express();
 
@@ -11,4 +9,11 @@ app.get('/test', function(req, res, next) {
 
 app.listen(process.env.PORT || 8080, process.env.IP, function() {
     console.log('node server started at', new Date());
+    var i = 0;
+    var id = setInterval(function() {
+        console.log('i is', i++);
+        if (i > 500) {
+            clearInterval(id);
+        }
+    }, 100);
 });
