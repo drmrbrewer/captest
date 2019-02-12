@@ -11,9 +11,9 @@ app.listen(process.env.PORT || 8080, process.env.IP, function() {
     console.log('node server started at', new Date());
     var i = 0;
     var id = setInterval(function() {
-        console.log('i is', i++);
-        if (i > 500) {
+        console.log(`host ${process.env.HOSTNAME} -- i is ${i++}`);
+        if (i > 10800) {
             clearInterval(id);
         }
-    }, 100);
+    }, 333);
 });
